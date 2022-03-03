@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool
+-I.\RTE\_STM32G031_PRO
+-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include
+-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx
+-o stm32g031_pro\stm32g0xx_hal_uart_ex.o --omf_browse stm32g031_pro\stm32g0xx_hal_uart_ex.crf --depend stm32g031_pro\stm32g0xx_hal_uart_ex.d --feedback "STM32G031_PRO\STM32G031_PRO.fed" "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c"

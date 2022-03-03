@@ -1,0 +1,111 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 11 11, 111, LIC=9WSKC-7QHN9-CXSU6-DKSJT-HKEDN-NYBA8
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.26.2.0
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+H:\work test\STM32_G0\project\boot\MDK-ARM\STM32G031_PRO.uvprojx
+Project File Date:  02/23/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\keil5\ARM\ARMCC\Bin'
+Rebuild target 'STM32G031_PRO'
+compiling stm32g0xx_ll_rcc.c...
+assembling startup_stm32g031xx.s...
+compiling stm32g0xx_hal_flash_ex.c...
+compiling stm32g0xx_hal_msp.c...
+compiling stm32g0xx_it.c...
+compiling stm32g0xx_hal_rcc_ex.c...
+compiling stm32g0xx_hal_flash.c...
+compiling stm32g0xx_hal_rcc.c...
+compiling main.c...
+compiling stm32g0xx_hal_iwdg.c...
+compiling stm32g0xx_hal_gpio.c...
+compiling stm32g0xx_hal.c...
+compiling stm32g0xx_hal_tim.c...
+compiling stm32g0xx_hal_cortex.c...
+compiling stm32g0xx_hal_pwr.c...
+compiling stm32g0xx_hal_pwr_ex.c...
+compiling stm32g0xx_hal_tim_ex.c...
+compiling stm32g0xx_hal_dma.c...
+compiling system_stm32g0xx.c...
+compiling app.c...
+..\Src\App\app.c(35): warning:  #188-D: enumerated type mixed with another type
+  		PC6Out(x);		 
+..\Src\App\app.c(12): warning:  #177-D: variable "jumpapp_dly"  was declared but never referenced
+      static u32_tim_dly_t apptim_dly , jumpapp_dly;	
+..\Src\App\app.c: 2 warnings, 0 errors
+compiling stm32g0xx_hal_uart.c...
+compiling stm32g0xx_hal_uart_ex.c...
+compiling stm32g0xx_hal_dma_ex.c...
+compiling iap.c...
+..\Src\App\iap.c(119): warning:  #167-D: argument of type "volatile u8 *" is incompatible with parameter of type "u8 *"
+  		u32CRC_Vaule = CRC_16(g_au8Rxbuffer, 4);
+..\Src\App\iap.c(130): warning:  #940-D: missing return statement at end of non-void function "cmd_file_end" 
+  }
+..\Src\App\iap.c(143): warning:  #167-D: argument of type "volatile u8 *" is incompatible with parameter of type "u8 *"
+  		u32CRC_Vaule = CRC_16(g_au8Rxbuffer, 4);
+..\Src\App\iap.c(170): warning:  #167-D: argument of type "volatile u8 *" is incompatible with parameter of type "u8 *"
+  		u32CRC_Vaule = CRC_16(g_au8Rxbuffer, 4);
+..\Src\App\iap.c(183): warning:  #940-D: missing return statement at end of non-void function "cmd_exit_update" 
+  }
+..\Src\App\iap.c(225): warning:  #188-D: enumerated type mixed with another type
+  		PC6Out(x);	
+..\Src\App\iap.c: 6 warnings, 0 errors
+compiling flash.c...
+..\Src\Bsp\flash.c(49): warning:  #550-D: variable "flash_erro_flag"  was set but never used
+  	u8 flash_erro_flag = 0;
+..\Src\Bsp\flash.c: 1 warning, 0 errors
+compiling usart.c...
+compiling combin_pack.c...
+compiling iwdg.c...
+compiling timer.c...
+compiling gpio.c...
+compiling bsp.c...
+linking...
+Program Size: Code=16292 RO-data=360 RW-data=72 ZI-data=2096  
+FromELF: creating hex file...
+"STM32G031_PRO\STM32G031_PRO.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32G0xx_DFP.1.4.0.pack
+                Keil.STM32G0xx_DFP.1.4.0
+                STMicroelectronics STM32G0 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32G031_PRO
+  E:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  E:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Build Time Elapsed:  00:00:24
+</pre>
+</body>
+</html>
