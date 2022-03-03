@@ -622,6 +622,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\Tool\cir_handle.c</FilePath>
             </File>
+            <File>
+              <FileName>crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\Bsp\crc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

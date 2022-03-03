@@ -41,6 +41,7 @@
 "stm32g031_pro\smbus.o"
 "stm32g031_pro\circularbuf.o"
 "stm32g031_pro\cir_handle.o"
+"stm32g031_pro\crc.o"
 --library_type=microlib --strict --scatter "STM32G031_PRO\STM32G031_PRO.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

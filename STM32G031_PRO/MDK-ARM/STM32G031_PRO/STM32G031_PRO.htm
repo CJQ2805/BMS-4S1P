@@ -3,7 +3,7 @@
 <title>Static Call Graph - [STM32G031_PRO\STM32G031_PRO.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32G031_PRO\STM32G031_PRO.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Mar 03 16:30:56 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Mar 03 17:48:25 2022
 <BR><P>
 <H3>Maximum Stack Usage =        388 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1067,9 +1067,9 @@ Global Symbols
 <P><STRONG><a name="[b1]"></a>PutData2CircBuf</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, circularbuf.o(i.PutData2CircBuf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = PutData2CircBuf &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isFull
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_rx_irq
 </UL>
@@ -1496,11 +1496,11 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_data_from_circ_buf
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isEmpty
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jump_application
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart1_rx_handle
 </UL>
