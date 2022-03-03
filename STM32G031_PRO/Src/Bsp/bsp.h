@@ -50,6 +50,50 @@ typedef __I uint32_t vuc32;
 typedef __I uint16_t vuc16; 
 typedef __I uint8_t vuc8;
 
+
+
+/*************************************************/
+/*
+	基于ARM Cortex - M0 的类位带操作
+*/
+typedef struct
+{
+    u16 bit0 : 1;
+    u16 bit1 : 1;
+    u16 bit2 : 1;
+    u16 bit3 : 1;
+    u16 bit4 : 1;
+    u16 bit5 : 1;
+    u16 bit6 : 1;
+    u16 bit7 : 1;
+    u16 bit8 : 1;
+    u16 bit9 : 1;
+    u16 bit10 : 1;
+    u16 bit11 : 1;
+    u16 bit12 : 1;
+    u16 bit13 : 1;
+    u16 bit14 : 1;
+    u16 bit15 : 1;
+	
+} Bits16_TypeDef;
+
+#define PAin(n) ( ( GPIOA->IDR&(1 << (n)) )>>n )
+#define PBin(n) ( ( GPIOB->IDR&(1 << (n)) )>>n )
+#define PCin(n) ( ( GPIOC->IDR&(1 << (n)) )>>n )
+#define PDin(n) ( ( GPIOD->IDR&(1 << (n)) )>>n )
+#define PEin(n) ( ( GPIOE->IDR&(1 << (n)) )>>n )
+#define PFin(n) ( ( GPIOF->IDR&(1 << (n)) )>>n )
+
+#define PAout(n)  ( ((Bits16_TypeDef *)(&(GPIOA->ODR)))->bit##n )
+#define PBout(n)  ( ((Bits16_TypeDef *)(&(GPIOB->ODR)))->bit##n )
+#define PCout(n)  ( ((Bits16_TypeDef *)(&(GPIOC->ODR)))->bit##n )
+#define PDout(n)  ( ((Bits16_TypeDef *)(&(GPIOD->ODR)))->bit##n )
+#define PEout(n)  ( ((Bits16_TypeDef *)(&(GPIOE->ODR)))->bit##n )
+#define PFout(n)  ( ((Bits16_TypeDef *)(&(GPIOF->ODR)))->bit##n )
+
+/*************************************************/
+
+
 typedef enum
 {
     Ok = 0u,                       ///< No error

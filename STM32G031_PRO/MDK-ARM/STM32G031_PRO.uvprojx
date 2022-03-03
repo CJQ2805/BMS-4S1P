@@ -597,6 +597,16 @@
               <FileType>1</FileType>
               <FilePath>..\Src\Bsp\iic_slave.c</FilePath>
             </File>
+            <File>
+              <FileName>iic_master.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\Bsp\iic_master.c</FilePath>
+            </File>
+            <File>
+              <FileName>SMBus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\Bsp\SMBus.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
