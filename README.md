@@ -1,0 +1,2 @@
+# STM32G0_FRAME
+STM32G031K8T6的框架当前完成ADC驱动（待测试）,IIC硬件从机，FLASH操作，BOOT和APP直接跳转
