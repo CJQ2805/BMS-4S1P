@@ -5,20 +5,35 @@ void SMBus_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   __HAL_RCC_GPIOA_CLK_ENABLE();  
   
-  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_4;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);  
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6,GPIO_PIN_SET);
 
-  GPIO_InitStruct.Pin = GPIO_PIN_7;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);  
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7,GPIO_PIN_SET);  
-
+  SMB_SDA = 1;
+  SMB_SCL = 1;
 }
 
+//void SDA_Mode(u8 u8mode)
+//{
+//  GPIO_InitTypeDef GPIO_InitStruct = {0};
+//  if(u8mode)
+//  {
+//	  GPIO_InitStruct.Pin = GPIO_PIN_5;
+//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+//	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct); 
+//  }	  
+//  else{
+//	  
+//	  GPIO_InitStruct.Pin = GPIO_PIN_5;
+//	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+//	  GPIO_InitStruct.Pull = GPIO_PULLUP;
+//	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);   
+//	  
+//  }
+//}
 /**
 	@brief SMB 起始信号	
 */
@@ -57,14 +72,15 @@ int SMB_Wait_Ack(void)
 {    
 	uint16_t u16tmptime = 0;
 	SMB_SCL = 0;	
+	SMB_SDA = 1;	
 	SDA_IN();
 	delay_us(100);
 	SMB_SCL = 1;
 	delay_us(10);
-	while(READ_SDA) // 0应答位 
+	while(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5)) // 0应答位 
 	{
 		u16tmptime ++;
-		if(u16tmptime > 2500)
+		if(u16tmptime > 25000)
 		{
 			SMB_Stop();
 			printf("SMB SDA low timeout \r\n");
@@ -153,7 +169,7 @@ uint8_t SMB_HostReadByte(uint8_t u8ack)
 		dat <<= 1; 
 		SMB_SCL = 1;
 		delay_us(50);
-		if(READ_SDA == 1)
+		if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5) == 1)
 			dat |= 0x01;
 		
 		SMB_SCL = 0;

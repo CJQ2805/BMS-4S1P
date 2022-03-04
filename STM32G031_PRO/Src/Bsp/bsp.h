@@ -5,6 +5,7 @@
 #include "stm32g0xx_it.h"
 #include "stm32g0xx_hal.h"
 
+#include "SMBus.h"
 #include "stdio.h"
 #include "stdbool.h"
 #include "string.h"
@@ -16,6 +17,7 @@
 #include "flash.h"
 #include "cir_handle.h"
 #include "iic_slave.h"
+#include "gauge_pro.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;
@@ -112,7 +114,7 @@ typedef enum
     OperationInProgress = 13u      ///< Indicator for operation in progress
 } en_result_t;
 /* Delay counter type */
-
+typedef uint32_t u32_tim_dly;
 
 
 /* Value is true (boolean_t type) */

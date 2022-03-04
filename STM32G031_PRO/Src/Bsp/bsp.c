@@ -16,7 +16,7 @@ void BSP_Init(void)
   __enable_irq();	
   HAL_Init();
   MX_GPIO_Init();
-  MX_ADC1_Init();
+//  MX_ADC1_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
   MX_IWDG_Init();
@@ -24,6 +24,7 @@ void BSP_Init(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   SystemClock_Config();
+  SMBus_Init();
 }
 
 
@@ -32,7 +33,8 @@ void delay_us(u32 nus)
 {		
 	u32 ticks;
 	u32 told,tnow,tcnt=0;
-	u32 reload=SysTick->LOAD;				//LOAD的值	    	 
+	u32 reload=SysTick->LOAD;				//LOAD的值
+	nus	= nus/4;		//这个函数比F系列多了4倍
 	ticks=nus*fac_us; 						//需要的节拍数 
 	told=SysTick->VAL;        				//刚进入时的计数器值
 	while(1)
@@ -54,6 +56,7 @@ void delay_ms(u16 nms)
 	u32 i;
 	for(i=0;i<nms;i++) delay_us(1000);
 }
+
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -116,3 +119,4 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
+

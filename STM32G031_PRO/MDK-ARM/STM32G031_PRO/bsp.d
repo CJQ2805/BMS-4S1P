@@ -41,11 +41,12 @@ stm32g031_pro\bsp.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h
 stm32g031_pro\bsp.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h
 stm32g031_pro\bsp.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h
 stm32g031_pro\bsp.o: ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h
+stm32g031_pro\bsp.o: ..\Src\Bsp\SMBus.h
+stm32g031_pro\bsp.o: ..\Src\Bsp\bsp.h
 stm32g031_pro\bsp.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32g031_pro\bsp.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 stm32g031_pro\bsp.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 stm32g031_pro\bsp.o: ..\Src\Bsp\gpio.h
-stm32g031_pro\bsp.o: ..\Src\Bsp\bsp.h
 stm32g031_pro\bsp.o: ..\Src\Bsp\iwdg.h
 stm32g031_pro\bsp.o: ..\Src\Bsp\adc.h
 stm32g031_pro\bsp.o: ..\Src\Bsp\timer.h
@@ -53,3 +54,4 @@ stm32g031_pro\bsp.o: ..\Src\Bsp\usart.h
 stm32g031_pro\bsp.o: ..\Src\Bsp\flash.h
 stm32g031_pro\bsp.o: ..\Src\Tool\cir_handle.h
 stm32g031_pro\bsp.o: ..\Src\Bsp\iic_slave.h
+stm32g031_pro\bsp.o: ..\Src\App\gauge_pro.h

@@ -52,8 +52,6 @@ void EXTI4_15_IRQHandler(void)
   /* USER CODE END EXTI4_15_IRQn 1 */
 }
 
-
-
 void BSP_LED_On(Led_TypeDef Led)
 {
   HAL_GPIO_WritePin(LED_PORT[Led], LED_PIN[Led], GPIO_PIN_SET);

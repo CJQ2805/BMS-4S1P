@@ -1,6 +1,5 @@
 #include "app.h"
 
-
 void APP_Init(void)
 {
 	BSP_Init();
@@ -14,7 +13,9 @@ void APP_PollingTask(void)
     static u32_tim_dly_t apptim_dly, reset_dly;	
 	static u8 x;
 	
-	 usart1_rx_handle();
+	GAUGE_CommTask();	
+	usart1_rx_handle();
+
 //	 if(Ok == TMR0_Delay(TRUE, &apptim_dly, TMR0_DELAY_MS(500)))
 //	 {	
 //		x = !x;
@@ -33,6 +34,7 @@ void APP_PollingTask(void)
 
 void APP_ParamInit(void)
 {
+	Gauge_Init();	
 	cir_handle_init();
 }
 
