@@ -1163,7 +1163,7 @@ I (..\Src\Bsp\usart.h)(0x62030E67)
 I (..\Src\Bsp\flash.h)(0x62022F9C)
 I (..\Src\Tool\cir_handle.h)(0x621EB808)
 I (..\Src\Bsp\iic_slave.h)(0x62063280)
-F (..\Src\Bsp\bsp.c)(0x6221DA57)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\bsp.o --omf_browse stm32g031_pro\bsp.crf --depend stm32g031_pro\bsp.d)
+F (..\Src\Bsp\bsp.c)(0x62295398)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\bsp.o --omf_browse stm32g031_pro\bsp.crf --depend stm32g031_pro\bsp.d)
 I (..\Src\Bsp\bsp.h)(0x62216578)
 I (../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h)(0x61CD0837)
 I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x61CD083A)
@@ -1218,7 +1218,7 @@ I (..\Src\Bsp\flash.h)(0x62022F9C)
 I (..\Src\Tool\cir_handle.h)(0x621EB808)
 I (..\Src\Bsp\iic_slave.h)(0x62063280)
 I (..\Src\App\gauge_pro.h)(0x62216552)
-F (..\Src\Bsp\adc.c)(0x62217649)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\adc.o --omf_browse stm32g031_pro\adc.crf --depend stm32g031_pro\adc.d)
+F (..\Src\Bsp\adc.c)(0x62280F00)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\adc.o --omf_browse stm32g031_pro\adc.crf --depend stm32g031_pro\adc.d)
 I (..\Src\Bsp\adc.h)(0x62030F00)
 I (..\Src\Bsp\bsp.h)(0x62216578)
 I (../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h)(0x61CD0837)
@@ -1273,7 +1273,7 @@ I (..\Src\Bsp\flash.h)(0x62022F9C)
 I (..\Src\Tool\cir_handle.h)(0x621EB808)
 I (..\Src\Bsp\iic_slave.h)(0x62063280)
 I (..\Src\App\gauge_pro.h)(0x62216552)
-F (..\Src\Bsp\gpio.c)(0x6221766F)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\gpio.o --omf_browse stm32g031_pro\gpio.crf --depend stm32g031_pro\gpio.d)
+F (..\Src\Bsp\gpio.c)(0x62295180)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\gpio.o --omf_browse stm32g031_pro\gpio.crf --depend stm32g031_pro\gpio.d)
 I (..\Src\Bsp\gpio.h)(0x6205D80C)
 I (..\Src\Bsp\bsp.h)(0x62216578)
 I (../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h)(0x61CD0837)
@@ -1548,7 +1548,7 @@ I (..\Src\Bsp\usart.h)(0x62030E67)
 I (..\Src\Tool\cir_handle.h)(0x621EB808)
 I (..\Src\Bsp\iic_slave.h)(0x62063280)
 I (..\Src\App\gauge_pro.h)(0x62216552)
-F (..\Src\Bsp\iic_slave.c)(0x621EB77D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\iic_slave.o --omf_browse stm32g031_pro\iic_slave.crf --depend stm32g031_pro\iic_slave.d)
+F (..\Src\Bsp\iic_slave.c)(0x622950D3)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\iic_slave.o --omf_browse stm32g031_pro\iic_slave.crf --depend stm32g031_pro\iic_slave.d)
 I (..\Src\Bsp\iic_slave.h)(0x62063280)
 I (..\Src\Bsp\bsp.h)(0x62216578)
 I (../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h)(0x61CD0837)
@@ -1604,7 +1604,7 @@ I (..\Src\Bsp\flash.h)(0x62022F9C)
 I (..\Src\Tool\cir_handle.h)(0x621EB808)
 I (..\Src\App\gauge_pro.h)(0x62216552)
 F (..\Src\Bsp\iic_master.c)(0x62207CBD)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\App -I ..\Src\Bsp -I ..\Src\Tool-I.\RTE\_STM32G031_PRO-IE:\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IE:\keil5\ARM\PACK\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32G031xx -DUSE_HAL_DRIVER -DSTM32G031xx-o stm32g031_pro\iic_master.o --omf_browse stm32g031_pro\iic_master.crf --depend stm32g031_pro\iic_master.d)
-I (..\Src\Bsp\iic_master.h)(0x622079E0)
+I (..\Src\Bsp\iic_master.h)(0x6222326C)
 I (..\Src\Bsp\bsp.h)(0x62216578)
 I (../Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h)(0x61CD0837)
 I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x61CD083A)
@@ -1882,3 +1882,4 @@ I (..\Src\Bsp\flash.h)(0x62022F9C)
 I (..\Src\Tool\cir_handle.h)(0x621EB808)
 I (..\Src\Bsp\iic_slave.h)(0x62063280)
 I (..\Src\App\gauge_pro.h)(0x62216552)
+F (..\..\README.md)(0x62295281)()

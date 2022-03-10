@@ -130,13 +130,36 @@ static u16 Get_Adc(u32 ch)
 
 static u16 Get_ADC_Average(u32 ch, u8 times)
 {
-	u32 total_val = 0;
-	u8 t;
-	for(t = 0;t<times; t++)
+	u32 au32adc_val[30] = {0};	//最大只能处理30个数据
+    u16 u16result_val = 0,u16tmp = 0;
+	u8 t,i,j;
+	
+	for(t = 0; t<times; t++)
 	{
-		total_val += Get_Adc(ch);
+		au32adc_val[t]= Get_Adc(ch);
 	}	
-	return total_val/times;
+	/*采用冒泡处理ADC数据*/	
+	for(i = 0;i <times; i++)
+	{
+		for(j = 0;j < times-i; j++)
+		{
+			if(au32adc_val[j] > au32adc_val[j+1])
+			{
+				u16tmp = au32adc_val[j];
+				au32adc_val[j] = au32adc_val[j+1];
+				au32adc_val[j+1] = u16tmp;
+			}
+		}
+	}
+	
+	for(i = 1; i<(times-1);i++)
+	{
+		u16result_val += au32adc_val[i];
+	}
+	
+	u16result_val = u16result_val/(times - 2);
+	
+	return u16result_val;
 }
 
 
