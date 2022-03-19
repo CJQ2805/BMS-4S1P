@@ -24,17 +24,19 @@ void BSP_Init(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   SystemClock_Config();
+	
+  I2C_Init();
   SMBus_Init();
+	
 }
 
 
-static u32 fac_us = 48;
+static u32 fac_us = 16;		/*APB timer clocks(MHz)*/
 void delay_us(u32 nus)
 {		
 	u32 ticks;
 	u32 told,tnow,tcnt=0;
 	u32 reload=SysTick->LOAD;				//LOAD的值
-	nus	= nus/4;		//这个函数比F系列多了4倍
 	ticks=nus*fac_us; 						//需要的节拍数 
 	told=SysTick->VAL;        				//刚进入时的计数器值
 	while(1)

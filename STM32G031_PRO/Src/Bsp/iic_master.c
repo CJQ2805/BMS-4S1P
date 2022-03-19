@@ -8,7 +8,6 @@
 */
 
 
-
 t_I2C_bit  tI2C_bit;
 void I2C_Init(void)
 {

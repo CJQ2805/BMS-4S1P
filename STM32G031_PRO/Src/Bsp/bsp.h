@@ -15,9 +15,18 @@
 #include "timer.h"
 #include "usart.h"
 #include "flash.h"
+#include "CRC.h"
 #include "cir_handle.h"
 #include "iic_slave.h"
+#include "iic_master.h"
+#include "SMBus.h"
 #include "gauge_pro.h"
+#include "bms_pro.h"
+#include "dcdc_pro.h"
+
+
+#define BOOT_STAT     0
+
 
 typedef int32_t  s32;
 typedef int16_t s16;
@@ -141,7 +150,7 @@ typedef uint32_t u32_tim_dly;
 /*Timer*/
 #define TMR0_INTERVAL 50UL /* ms */
 #define TMR0_DELAY_MS(nms) ((nms) / TMR0_INTERVAL)
-
+#define TMR0_DELAY_SEC(nsec) (TMR0_DELAY_MS(nsec *1000))
 
 
 

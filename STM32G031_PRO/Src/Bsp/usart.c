@@ -264,7 +264,7 @@ void USART1_IRQHandler(void)
 //  __HAL_UART_GET_IT(&huart1, UART_IT_RXNE | UART_IT_RXFNE);	
   __HAL_UART_CLEAR_FLAG(&huart1,UART_IT_RXNE| UART_IT_RXFNE);
   /* USER CODE BEGIN USART1_IRQn 1 */
-  usart1_rx_irq((u8)huart1.Instance->RDR &(u8)0x00FF);
+  Usart1_RxIrq((u8)huart1.Instance->RDR &(u8)0x00FF);
   /* USER CODE END USART1_IRQn 1 */
 
 }

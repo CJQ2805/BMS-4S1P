@@ -6,8 +6,8 @@
 
 typedef uint8_t  u8;
 
-void usart1_rx_irq(u8 u8val);
-void usart1_rx_handle(void);
-void cir_handle_init(void);
+void Usart1_RxIrq(u8 u8val);
+void Usart1_RxHandle(void);
+void Cir_HandleInit(void);
 
 #endif

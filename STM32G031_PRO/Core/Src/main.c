@@ -28,9 +28,10 @@
 int main(void)
 {
   /*APP地址从0x8005000 开始*/	
-//  SCB->VTOR = FLASH_BASE | 0x5000; /* Vector Table Relocation in Internal FLASH. */ 
+#if BOOT_STAT
+  SCB->VTOR = FLASH_BASE | 0x5000; /* Vector Table Relocation in Internal FLASH. */ 
   //__enable_irq();	
-
+#endif
   u32_tim_dly_t  tim_dly;
   static u8 x;
 	

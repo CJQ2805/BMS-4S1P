@@ -9,13 +9,13 @@ u8 au8circ_rx_buff[USART1_RX_CIRC_BUF_LEN] = {0};
 
 static int circ_usart1_rx_data_handle(u8 *pu8buff);
 
-void usart1_rx_irq(u8 u8val)
+void Usart1_RxIrq(u8 u8val)
 {
 	PutData2CircBuf(&gt_rx_circ_buf, u8val);
 }
 
 
-void usart1_rx_handle(void)
+void Usart1_RxHandle(void)
 {
 
 	u8 au8rx_buf_data[1] = {0};	
@@ -72,10 +72,12 @@ static int circ_usart1_rx_data_handle(u8 *pu8buff)
 			break;
 		}
 	
-	}	
+	}
+	
+	return 0;
 }
 
-void cir_handle_init(void)
+void Cir_HandleInit(void)
 {
 	memset(&gt_rx_circ_buf, 0x00, sizeof(gt_rx_circ_buf));
 	gt_rx_circ_buf.u16RxBufSize = USART1_RX_CIRC_BUF_LEN;

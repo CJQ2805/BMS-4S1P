@@ -134,11 +134,16 @@ static u16 Get_ADC_Average(u32 ch, u8 times)
     u16 u16result_val = 0,u16tmp = 0;
 	u8 t,i,j;
 	
+	if(times > 30)
+	{
+		return 0;
+	}
+	
 	for(t = 0; t<times; t++)
 	{
 		au32adc_val[t]= Get_Adc(ch);
 	}	
-	/*采用冒泡处理ADC数据*/	
+	
 	for(i = 0;i <times; i++)
 	{
 		for(j = 0;j < times-i; j++)

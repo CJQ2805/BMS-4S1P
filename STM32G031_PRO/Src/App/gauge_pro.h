@@ -4,14 +4,14 @@
 
 #define  GAUGE_SMB_ADDR 	     	  0x16
 
-#define  BQ40Z50_TEMPERATURE_ADDR      0x08
-#define  BQ40Z50_VOLTAGE_ADDR          0x09
-#define  BQ40Z50_CURRENT_ADRR          0x0A
-#define  BQ40Z50_SOC_ADDR			   0x0D
-#define  BQ40Z50_EMPTY_TIME_ADDR	   0x12
-#define  BQ40Z50_FULL_TIME_ADDR		   0x13
-#define  BQ40Z50_BATTERY_STAT_ADDR     0x16
-#define  BQ40Z50_SOH_ADDR			   0x4F
+#define  BQ40Z50_TEMPERATURE_ADDR     0x08
+#define  BQ40Z50_VOLTAGE_ADDR         0x09
+#define  BQ40Z50_CURRENT_ADDR         0x0A
+#define  BQ40Z50_SOC_ADDR			  0x0D
+#define  BQ40Z50_EMPTY_TIME_ADDR	  0x12
+#define  BQ40Z50_FULL_TIME_ADDR		  0x13
+#define  BQ40Z50_BATTERY_STAT_ADDR    0x16
+#define  BQ40Z50_SOH_ADDR			  0x4F
 
 #define  BQ40Z50_SAFETYSTATUS_ADDR    0x0051
 #define  BQ40Z50_ID  				  0x0006

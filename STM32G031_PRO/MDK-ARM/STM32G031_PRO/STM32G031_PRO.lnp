@@ -30,6 +30,8 @@
 "stm32g031_pro\system_stm32g0xx.o"
 "stm32g031_pro\app.o"
 "stm32g031_pro\gauge_pro.o"
+"stm32g031_pro\dcdc_pro.o"
+"stm32g031_pro\bms_pro.o"
 "stm32g031_pro\bsp.o"
 "stm32g031_pro\adc.o"
 "stm32g031_pro\gpio.o"

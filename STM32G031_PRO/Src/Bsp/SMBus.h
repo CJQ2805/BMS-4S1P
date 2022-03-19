@@ -8,7 +8,7 @@
 
 #define 	SMB_SCL     PAout(4)
 #define 	SMB_SDA     PAout(5)
-#define 	READ_SDA    PAin(5)
+#define 	READ_SMBA    PAin(5)
 
 
 void SMBus_Init(void);

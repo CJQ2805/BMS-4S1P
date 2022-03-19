@@ -42,9 +42,9 @@ void SMB_Start(void)
 	SDA_OUT();
 	SMB_SDA = 1;
 	SMB_SCL = 1;
-	delay_us(50);
+	delay_us(20);
 	SMB_SDA = 0;
-	delay_us(50);
+	delay_us(20);
 	SMB_SCL = 0;
 }
 
@@ -57,11 +57,11 @@ void SMB_Stop(void)
 	SDA_OUT();
 	SMB_SCL = 0;
 	SMB_SDA = 0;    
-	delay_us(50);			
+	delay_us(20);			
 	SMB_SDA = 1;
-	delay_us(10);	
+	delay_us(5);	
 	SMB_SCL = 1;
-	delay_us(50);	
+	delay_us(20);	
 }
 
 
@@ -74,13 +74,13 @@ int SMB_Wait_Ack(void)
 	SMB_SCL = 0;	
 	SMB_SDA = 1;	
 	SDA_IN();
-	delay_us(100);
+	delay_us(35);
 	SMB_SCL = 1;
-	delay_us(10);
+	delay_us(5);
 	while(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5)) // 0Ó¦´ðÎ» 
 	{
 		u16tmptime ++;
-		if(u16tmptime > 25000)
+		if(u16tmptime > 2500)
 		{
 			SMB_Stop();
 			printf("SMB SDA low timeout \r\n");
@@ -110,13 +110,13 @@ void SMB_ACK(uint8_t ack)
 	{
 		SMB_SDA = 1;
 	}
-	delay_us(70);
+	delay_us(25);
 	SMB_SCL = 0;
-	delay_us(5); 	
+	delay_us(7); 	
 	SMB_SCL = 1;
-	delay_us(80); 
+	delay_us(25); 
 	SMB_SCL = 0;	
-	delay_us(4);	
+	delay_us(10);	
 }
 
 
@@ -127,7 +127,7 @@ void SMB_HostWriteByte(uint8_t dat)
 {
 	uint8_t i = 0;
 	
-	delay_us(10); 
+	delay_us(5); 
 	SMB_SCL = 0;
 	SDA_OUT();		
 
@@ -142,11 +142,11 @@ void SMB_HostWriteByte(uint8_t dat)
 			SMB_SDA = 0;
 		}
 		dat <<= 1;
-		delay_us(50);
+		delay_us(25);
 		SMB_SCL = 1;
-		delay_us(50);
+		delay_us(25);
 		SMB_SCL = 0;
-		delay_us(10);
+		delay_us(5);
 	}
 	
 }
@@ -161,19 +161,19 @@ uint8_t SMB_HostReadByte(uint8_t u8ack)
 	unsigned char i=0,dat = 0;
 	SDA_IN();	
 	SMB_SCL = 0;
-	delay_us(100);
+	delay_us(50);
 	for(i=0;i<8;i++)
 	{
 		SMB_SCL = 0;
-		delay_us(50);
+		delay_us(20);
 		dat <<= 1; 
 		SMB_SCL = 1;
-		delay_us(50);
+		delay_us(20);
 		if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_5) == 1)
 			dat |= 0x01;
 		
 		SMB_SCL = 0;
-		delay_us(10);		
+		delay_us(5);		
 	}	
 	
 	if(u8ack)

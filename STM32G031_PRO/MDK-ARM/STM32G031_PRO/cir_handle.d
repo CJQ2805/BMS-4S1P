@@ -53,7 +53,11 @@ stm32g031_pro\cir_handle.o: ..\Src\Bsp\adc.h
 stm32g031_pro\cir_handle.o: ..\Src\Bsp\timer.h
 stm32g031_pro\cir_handle.o: ..\Src\Bsp\usart.h
 stm32g031_pro\cir_handle.o: ..\Src\Bsp\flash.h
+stm32g031_pro\cir_handle.o: ..\Src\Bsp\CRC.h
 stm32g031_pro\cir_handle.o: ..\Src\Tool\cir_handle.h
 stm32g031_pro\cir_handle.o: ..\Src\Bsp\iic_slave.h
+stm32g031_pro\cir_handle.o: ..\Src\Bsp\iic_master.h
 stm32g031_pro\cir_handle.o: ..\Src\App\gauge_pro.h
+stm32g031_pro\cir_handle.o: ..\Src\App\bms_pro.h
+stm32g031_pro\cir_handle.o: ..\Src\App\dcdc_pro.h
 stm32g031_pro\cir_handle.o: ..\Src\Tool\CircularBuf.h

@@ -53,6 +53,10 @@ stm32g031_pro\iic_slave.o: ..\Src\Bsp\adc.h
 stm32g031_pro\iic_slave.o: ..\Src\Bsp\timer.h
 stm32g031_pro\iic_slave.o: ..\Src\Bsp\usart.h
 stm32g031_pro\iic_slave.o: ..\Src\Bsp\flash.h
+stm32g031_pro\iic_slave.o: ..\Src\Bsp\CRC.h
 stm32g031_pro\iic_slave.o: ..\Src\Tool\cir_handle.h
 stm32g031_pro\iic_slave.o: ..\Src\Bsp\iic_slave.h
+stm32g031_pro\iic_slave.o: ..\Src\Bsp\iic_master.h
 stm32g031_pro\iic_slave.o: ..\Src\App\gauge_pro.h
+stm32g031_pro\iic_slave.o: ..\Src\App\bms_pro.h
+stm32g031_pro\iic_slave.o: ..\Src\App\dcdc_pro.h
