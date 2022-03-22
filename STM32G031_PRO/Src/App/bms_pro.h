@@ -97,6 +97,7 @@ enum _bms_charge_stat_e{
 	BMS_CHARGE_CHARGE,
 	BMS_CHARGE_DISCHARGE,
 	BMS_CHARGE_CHARG_AND_DISCHARG,
+	BMS_CHARGE_FAULT,
 };
 
 enum _bms_cap_stat_e{

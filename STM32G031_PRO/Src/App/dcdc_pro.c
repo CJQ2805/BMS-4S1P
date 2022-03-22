@@ -4,7 +4,7 @@
 /**
 	@breif
 	@Author: CJQ2805
-	DCDC model: SC8886
+	DCDC Model: SC8886
 */
 
 struct  _dcdc_info_t  gt_dcdc_info; 

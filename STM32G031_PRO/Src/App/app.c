@@ -1,6 +1,5 @@
 #include "app.h"
 
-
 void APP_Init(void)
 {
 	BSP_Init();

@@ -23,6 +23,6 @@ typedef enum
 
 #define PC6Out(x)	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6,x)
 
-
+void WakeUp_GPIOSet(void);
 #endif
 

@@ -60,3 +60,4 @@ stm32g031_pro\bms_pro.o: ..\Src\Bsp\iic_master.h
 stm32g031_pro\bms_pro.o: ..\Src\App\gauge_pro.h
 stm32g031_pro\bms_pro.o: ..\Src\App\bms_pro.h
 stm32g031_pro\bms_pro.o: ..\Src\App\dcdc_pro.h
+stm32g031_pro\bms_pro.o: ..\Src\Bsp\display.h

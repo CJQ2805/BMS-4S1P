@@ -42,6 +42,7 @@
 "stm32g031_pro\iic_slave.o"
 "stm32g031_pro\iic_master.o"
 "stm32g031_pro\smbus.o"
+"stm32g031_pro\display.o"
 "stm32g031_pro\circularbuf.o"
 "stm32g031_pro\cir_handle.o"
 "stm32g031_pro\crc.o"

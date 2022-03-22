@@ -622,6 +622,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\Bsp\SMBus.c</FilePath>
             </File>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\Bsp\display.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -1,10 +1,10 @@
 #include "bms_pro.h"
 #include "bsp.h"
-
+#include "display.h"
 /**
 	@breif 
 	@Author:CJQ2805  
-	   BMS Control
+	BMS Control Code
 */
 struct _bms_info_t   	gt_bms_info;
 
@@ -16,15 +16,19 @@ static void BMS_FaultHandle(void);
 static void BMS_SetSafetyStatus(void);
 static void BMS_ClearSafetyStatus(void);
 static void BMS_DCDCCharge(void);
+static void BMS_Display(void);
+static void BMS_LowPowerMode(void);
 
 void BMS_ProTask(void)
 {
 	BMS_GaugeInfoUpdate();
 	BMS_DCDCInfoUpdate();
 	BMS_FullChargeCap();
+	BMS_LowPowerMode();	
 	BMS_FaultHandle();
 	BMS_DCDCCharge();
-//	BMS_KeyScan();	
+//	BMS_KeyScan();	暂时没做
+	BMS_Display();
 }
 
 
@@ -151,7 +155,7 @@ static void BMS_DCDCInfoUpdate(void)
 static void BMS_DCDCCharge(void)
 {
 	
-	static u32_tim_dly_t  dlyDcDcCharge;
+	static u32_tim_dly_t  dlyDcDcCharge, dlyChargeStat;
 	
 	if(Ok == TMR0_Delay(((gt_bms_info.tbms_stat.bat_cap_stat != BMS_CAP_FULL) &&
 						(gt_bms_info.tbms_stat.fault_stat != BMS_FAULT_TEMP)),
@@ -163,22 +167,78 @@ static void BMS_DCDCCharge(void)
 			return;
 		}
 
-
 	}	
-	
-	if(BMS_CHARGE_CHARGE != gt_bms_info.tbms_stat.charge_stat)
-	{	
-		if(gt_bms_info.tbms_gague_info.ibat_cur < (-200))
+	/*update charge stat*/
+	if(Ok == TMR0_Delay(TRUE,&dlyChargeStat, TMR0_DELAY_MS(100)))
+	{
+		if(gt_bms_info.tbms_gague_info.ibat_cur > (200))
 		{
-			gt_bms_info.tbms_stat.charge_stat = BMS_CHARGE_CHARGE;
+			if(BMS_CHARGE_CHARGE != gt_bms_info.tbms_stat.charge_stat)
+			{	
+				gt_bms_info.tbms_stat.charge_stat = BMS_CHARGE_CHARGE;
+			}
+		}	
+		else if(((gt_bms_info.tbms_gague_info.ibat_cur >( -300)) && (gt_bms_info.tbms_gague_info.ibat_cur < 201)) ||
+				  gt_bms_info.tbms_stat.adapter_stat == BMS_ADAPTER_NONE)
+		{
+			if(BMS_CHARGE_NONE != gt_bms_info.tbms_stat.charge_stat)
+			{				
+				gt_bms_info.tbms_stat.charge_stat = BMS_CHARGE_NONE;	
+			}
+		}
+		else
+		{
+			if(BMS_CHARGE_NONE != gt_bms_info.tbms_stat.charge_stat)
+			{				
+				gt_bms_info.tbms_stat.charge_stat = BMS_CHARGE_DISCHARGE;	
+			}		
+		
 		}
 	}
-	
-	if((gt_bms_info.tbms_gague_info.ibat_cur >( -50)) && (gt_bms_info.tbms_gague_info.ibat_cur <50))
+		
+}
+
+static void BMS_LowPowerMode(void)
+{
+	static u32_tim_dly_t dlyLowPower;
+	if( Ok == TMR0_Delay(((BMS_CHARGE_NONE == gt_bms_info.tbms_stat.charge_stat)||
+						  (BMS_CHARGE_FAULT == gt_bms_info.tbms_stat.charge_stat)), 
+						   &dlyLowPower, TMR0_DELAY_SEC(10)) )
 	{
-			gt_bms_info.tbms_stat.charge_stat = BMS_CHARGE_NONE;	
+		WakeUp_GPIOSet();
+//		led_light_off();
+//		printf("\r\n enter sleep mode!");	
+//		SYS_EnterSTOPMode(SYS_PWR_WFI);	//进入停止模式
 	}
+}
+
+static void BMS_Display(void)
+{
+
+	switch(gt_bms_info.tbms_stat.charge_stat)
+	{
+		case BMS_CHARGE_NONE:
+		case BMS_CHARGE_DISCHARGE:	
+
+		led_Disply((enum _dis_charge_stat_e)BMS_CHARGE_NONE, gt_bms_info.tbms_gague_info.u16soc);
+		
+		break;
+		
+		
+		case BMS_CHARGE_CHARGE:
+		case BMS_CHARGE_CHARG_AND_DISCHARG:
+			
+		led_Disply((enum _dis_charge_stat_e)BMS_CHARGE_CHARGE, gt_bms_info.tbms_gague_info.u16soc);	
+		
+		break;
+		
+		case BMS_CHARGE_FAULT:
+			
+		led_Disply((enum _dis_charge_stat_e)BMS_CHARGE_FAULT, gt_bms_info.tbms_gague_info.u16soc);	
+		
+		break;
 	
+	}
 }
 
 /*BMS key_Scan has not been implemented*/

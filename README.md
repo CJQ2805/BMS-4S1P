@@ -14,6 +14,8 @@ GPIO:  	    PB5  PC6	    EXIT  LED
 ADC:		PA6  PA7
 USART1:     PA9  PA10       TX    RX 
 
+LED Display：PB0 PB1 PB2 PB3
+
 /**硬件层特殊说明**/
 
 IIC 和SMBus总线，在layout时，尽量和功率线远离，可采用GND线分层处理，并且在IIC总线上加上2个 100Ω电阻作为滤波避免干扰
